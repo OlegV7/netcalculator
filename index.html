@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Нето Калкулатор</title>
+</head>
+<body>
+    <h1 class="text-center m-5">Нето Калкулатор</h1>
+    <div class="container">
+    <form id="brutoForm" class="form-group text-center mb-4">
+        <div class="calcForm">
+            <label class="grossLabel">Бруто: </label>
+            <input type="number" name="bruto" class="form-control mx-auto" id="brutoInput">
+            <br><br>
+            <button type="submit" class="btn btn-primary text-center mx-auto">Пресметај</button>
+        </div>
+        <br><br>
+    </form>
+    <button type="submit" class="btn btn-primary again">Пресметај Повторно</button>
+    <div class="loader">
+        <img class="rounded mx-auto d-block loaderGif" src="img/loading.gif" alt="">
+    </div>
+        <div class="tableContainer">
+            <div class="text-center">
+                <span class="loadGross"></span><span class="loadNet"></span>
+            </div>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td><strong>Придонеси</strong></td>
+                        <td><strong>Износ:</strong></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Задолжително пензиско и инвалидско осигурување - 18,8%: </td>
+                        <td><span id="pension">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Задолжително здравствено осигурување - 7,5%: </td>
+                        <td><span id="healthInsurance">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Дополнителен придонес за здравствено осигурување
+                            за случај на повреда на работа и професионално заболување - 0,5%: </td>
+                        <td><span id="injury">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Задолжителен придонес за осигурување во случај на невработеност -  1,2%: </td>
+                        <td><span id="unemployment">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td><strong>Вкупно Придонеси</strong></td>
+                        <td><strong><span id="afterP">/</span></strong></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Лично Ослободување</td>
+                        <td>8228.00 ден.</td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Даночна основа за пресметка на данок на личен доход	</td>
+                        <td><span id="taxLayOff">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td>Персонален данок на доход (ПДД) - 10%</td>
+                        <td><span id="taxPercentage">/</span></td>
+                    </tr>
+                    <tr scope='row'>
+                        <td><strong>Нето:</strong></td>
+                        <td><strong><span id="netPay">/</span></strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-center mb-4"><strong><span id="gross"></span> – <span id="insurance"></span> – <span id="tax"></span> = <span id="net"></span></strong></p>
+        </div>
+    </div>
+    <p class="text-center mb-4 calc"><strong>Бруто Плата – Придонеси – ПДД = Нето Плата</strong></p>
+
+    <script src="app.js"></script>
+</body>
+</html>

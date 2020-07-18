@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.tableContainer{
+    display: none;
+}
+
+#table{
+    display: block;
+}
+
+.loader{
+    display: none;
+}
+
+.footer{
+
+    width: 100%;
+}
+
+.again{
+    display: none;
+}
+
+#again1{
+    display: inline-block;
+}
+
+.calcForm1{
+    display: none;
+}
+
+#calcForm1{
+    display: none;
+}
+
+#brutoInput{
+    width: 300px;
+}
+
+.grossLabel{
+    margin-right: 235px;
+}
